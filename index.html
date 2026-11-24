@@ -31,9 +31,9 @@
   .dots button.on { background:var(--ink); }
   section { padding:50px 0; border-top:1px solid var(--line); scroll-margin-top:70px; }
   section h2 { font-family:"Amatic SC", cursive; font-size:48px; margin:0 0 20px; }
-  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:18px; }
-  .grid figure { margin:0; background:#fff; padding:10px; box-shadow:0 2px 10px rgba(0,0,0,.08); cursor:zoom-in; }
-  .grid img { width:100%; aspect-ratio:1; object-fit:cover; display:block; }
+  .grid { columns:250px; column-gap:18px; }
+  .grid figure { margin:0 0 18px; break-inside:avoid; background:#fff; padding:10px; box-shadow:0 2px 10px rgba(0,0,0,.08); cursor:zoom-in; }
+  .grid img { width:100%; height:auto; display:block; }
   .grid figcaption { font-size:16px; padding-top:6px; }
   .empty { color:#888; font-style:italic; }
   footer { text-align:center; font-size:15px; color:#777; padding:40px 20px; border-top:1px solid var(--line); }
@@ -78,7 +78,7 @@
   </div>
 
   <section id="prints"><h2>Prints</h2><div class="grid" data-cat="prints"></div></section>
-  <section id="paintings"><h2>Paintings</h2><div class="grid" data-cat="paintings"></div></section>
+  <section id="paintings"><h2>Paintings &amp; drawings</h2><div class="grid" data-cat="paintings"></div></section>
   <section id="sculpture"><h2>Sculpture</h2><div class="grid" data-cat="sculpture"></div></section>
   <section id="stories"><h2>#storieswithsuzzy</h2><div class="grid" data-cat="stories"></div></section>
   <section id="bio">
@@ -99,10 +99,30 @@
      file: "name.jpg", title: "Title, year, medium" },
    ============================================================ */
 const WORKS = [
-  { cat: "prints", file: "mom-back-3.jpg",        title: "" },
-  { cat: "prints", file: "untitled-2-1.jpg",      title: "" },
-  { cat: "prints", file: "Suzzy-jean-2-crop.jpg", title: "" },
-  { cat: "prints", file: "Suzzy-jean-3.jpg",      title: "" },
+  { cat: "prints", file: "mom-back-3.jpg",              title: "" },
+  { cat: "prints", file: "blue-face-print.jpg",         title: "" },
+  { cat: "prints", file: "two-dames-in-a-dive.jpg",     title: "Two Dames in a Dive, 1988" },
+  { cat: "prints", file: "three-figures-detail.jpg",    title: "" },
+  { cat: "prints", file: "forest-figure-woodcut.jpg",   title: "" },
+  { cat: "prints", file: "desponding-moment-ap.jpg",    title: "Desponding Moment, 1986 (artist proof)" },
+  { cat: "prints", file: "desponding-moment-3-25.jpg",  title: "Desponding Moment, 1986 (3/25)" },
+  { cat: "prints", file: "bubble-monster.jpg",          title: "Melissa and the Bubble Monster, 1987" },
+  { cat: "prints", file: "untitled-2-1.jpg",            title: "" },
+  { cat: "prints", file: "Suzzy-jean-3.jpg",            title: "" },
+  { cat: "prints", file: "sunglasses-etching.jpg",      title: "" },
+  { cat: "prints", file: "reclining-figure-etching.jpg",title: "" },
+  { cat: "prints", file: "dresser-and-moon.jpg",        title: "" },
+  { cat: "prints", file: "child-face-print.jpg",        title: "" },
+
+  { cat: "paintings", file: "woman-with-cherubs.jpg",     title: "" },
+  { cat: "paintings", file: "girl-flower-crown.jpg",      title: "" },
+  { cat: "paintings", file: "golden-face.jpg",            title: "" },
+  { cat: "paintings", file: "veiled-woman-1984.jpg",      title: "1984" },
+  { cat: "paintings", file: "faces-on-canvas.jpg",        title: "" },
+  { cat: "paintings", file: "colored-pencil-portrait.jpg",title: "" },
+  { cat: "paintings", file: "green-eyes.jpg",             title: "" },
+  { cat: "paintings", file: "sunglasses-drawing.jpg",     title: "" },
+  { cat: "paintings", file: "comic-panels.jpg",           title: "" },
 ];
 
 /* If an image isn't in /images yet, load the archived copy from the Wayback Machine */
